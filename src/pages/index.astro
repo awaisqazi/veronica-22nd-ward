@@ -19,11 +19,11 @@ const planks = [
     <div class="wrap hero__inner">
       <div class="hero__copy">
         <span class="hero__badge"><span data-i18n="home.badge">Concept · 22nd Ward · Little Village</span></span>
-        <h1><span data-i18n="home.h1a">Listen first.</span> <em data-i18n="home.h1b">Then build.</em></h1>
-        <p class="hero__es" data-i18n="home.hero_es">Primero escuchar. Luego construir.</p>
-        <p class="lede" data-i18n="home.lede">Veronica Quiñones was born in Little Village, grew up here, and still lives here. She co-founded the Latina Sweat Project and runs its community programming. She is exploring a run for 22nd Ward alderperson because the neighborhood that raised her deserves a ward office that listens the way she does.</p>
+        <h1><span data-i18n="home.h1a">Cuéntame,</span> <em data-i18n="home.h1b">Villita.</em></h1>
+        <p class="hero__es" data-i18n="home.hero_es">A campaign that starts by asking, not announcing.</p>
+        <p class="lede" data-i18n="home.lede">Veronica Quiñones was born in Little Village, grew up here, and still lives here. She co-founded the Latina Sweat Project and runs its community programming. She is exploring a run for 22nd Ward alderperson because the neighborhood that raised her deserves a ward office that asks first and shows up the next week with it done.</p>
         <div class="row mt-2">
-          <a class="btn btn--rose" href={`${base}/join/`} data-i18n="home.cta1">Walk the ward with us</a>
+          <a class="btn btn--rose" href={`${base}/join/`} data-i18n="home.cta1">Tell her what your block needs</a>
           <a class="btn btn--ghost" href={`${base}/platform/`} data-i18n="home.cta2">Read the platform</a>
         </div>
         <div class="hero__count">
@@ -39,15 +39,15 @@ const planks = [
 
   <div class="ticker dark" data-ticker aria-hidden="true">
     <div class="ticker__track">
-      <span>De La Villita, para La Villita.</span><span>Primero escuchar. Luego construir.</span><span>Hoy por mí, mañana por ti.</span><span>Reabramos la 26.</span><span>La Villita no se hereda. Se elige.</span><span>Nacida en La Villita.</span>
-      <span>De La Villita, para La Villita.</span><span>Primero escuchar. Luego construir.</span><span>Hoy por mí, mañana por ti.</span><span>Reabramos la 26.</span><span>La Villita no se hereda. Se elige.</span><span>Nacida en La Villita.</span>
+      <span>Cuéntame, Villita.</span><span>Las llaves no se heredan.</span><span>Nacida aquí. Me quedo aquí.</span><span>Puertas abiertas, libros abiertos.</span><span>Empezó con un tapete en el parque.</span><span>Vecina, no política.</span>
+      <span>Cuéntame, Villita.</span><span>Las llaves no se heredan.</span><span>Nacida aquí. Me quedo aquí.</span><span>Puertas abiertas, libros abiertos.</span><span>Empezó con un tapete en el parque.</span><span>Vecina, no política.</span>
     </div>
   </div>
 
   <section class="section">
     <div class="wrap">
-      <span class="eyebrow" data-i18n="home.built_eyebrow">What we already built</span>
-      <h2 data-i18n="home.built_h">We didn't wait for a title. We built it.</h2>
+      <span class="eyebrow" data-i18n="home.built_eyebrow">Where this comes from</span>
+      <h2 data-i18n="home.built_h">It started with a mat in a park.</h2>
       <p class="lede" data-i18n="home.built_lede">In 2022 Veronica and her sister started pop-up yoga classes in Little Village parks and mutual aid sessions inside migrant shelters. Nobody asked them to. That became the Latina Sweat Project: daily programming on the Southwest Side, thousands of free classes, nearly a hundred neighbors trained as teachers on full scholarships, meals and coats and school supplies for families when they needed them.</p>
       <div class="grid grid--4 mt-2">
         <div class="stat animate-in"><div class="num"><span data-count="5000" data-suffix="+">5,000+</span></div><div class="label" data-i18n="home.b1">free or discounted classes</div></div>
@@ -77,8 +77,8 @@ const planks = [
   <section class="section sand">
     <div class="wrap">
       <span class="eyebrow" data-i18n="home.plan_eyebrow">The platform</span>
-      <h2 data-i18n="home.plan_h">Rebuild. Together.</h2>
-      <p class="lede" data-i18n="home.plan_lede">La Villita stood up to the raids. Now it has to be rebuilt by the people who live here. Seven planks, each one started by something a neighbor said, each one tied to a mechanism a 22nd Ward alderperson actually controls.</p>
+      <h2 data-i18n="home.plan_h">Seven things neighbors asked for.</h2>
+      <p class="lede" data-i18n="home.plan_lede">La Villita stood up to the raids. Now it has to be rebuilt by the people who live here. Every one of these began as something a neighbor said at a class, a run, a shelter, or a kitchen table. Every one is tied to a lever a 22nd Ward alderperson actually holds.</p>
       <div class="grid grid--3 mt-2">
         {planks.map((p, i) => (
           <a class={`card plank animate-in d${i % 4}`} href={`${base}/platform/#${p.key}`}>
@@ -99,18 +99,18 @@ const planks = [
 
   <section class="section rose-bg noise choice">
     <div class="wrap">
-      <span class="eyebrow" style="color:#fff" data-i18n="home.choice_eyebrow">A choice, not a handoff</span>
-      <h2 data-i18n="home.choice_h">This seat has been passed down for forty years. We're asking for it the other way: from you.</h2>
-      <p class="lede" style="color:rgba(255,255,255,.88)" data-i18n="home.choice_p">García to Muñoz to Rodriguez, and now the incumbent's chief of staff, announced the day after he stepped aside. Nobody is questioning anyone's courage or commitment to this community. We are questioning the process. A seat can be handed down. A vote can't.</p>
-      <p class="choice__es">Un puesto se puede heredar. Un voto, no.</p>
+      <span class="eyebrow" style="color:#fff" data-i18n="home.choice_eyebrow">Las llaves</span>
+      <h2 data-i18n="home.choice_h">Nobody handed us the keys to the studio. We earned them every morning at 6 a.m. The keys to this ward should work the same way.</h2>
+      <p class="lede" style="color:rgba(255,255,255,.88)" data-i18n="home.choice_p">For forty years this seat has moved from one office to the next by arrangement. Veronica respects everyone in this race and will not say a word against them. She is simply asking for the job the way she has done every job: by showing up, listening, and earning it block by block.</p>
+      <p class="choice__es">Las llaves no se heredan. Se ganan, cuadra por cuadra.</p>
       <a class="btn btn--gold mt-1" href={`${base}/meet/`} data-i18n="home.choice_cta">Why Veronica</a>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <span class="eyebrow" data-i18n="home.cal_eyebrow">Mark these dates</span>
-      <h2 data-i18n="home.cal_h">Show up. Bring your comadre.</h2>
+      <span class="eyebrow" data-i18n="home.cal_eyebrow">For the fridge door</span>
+      <h2 data-i18n="home.cal_h">Four dates every household in the ward should know.</h2>
       <div class="grid grid--4 mt-2">
         <div class="card"><span class="tag">Oct 26, 2026</span><h3 data-i18n="home.d1_h">Petitions due</h3><p class="mb-0" data-i18n="home.d1_p">5 p.m. at the Board of Elections. 473 valid signatures required; we file three times that.</p></div>
         <div class="card"><span class="tag">Dec 17, 2026</span><h3 data-i18n="home.d2_h">Ballot certified</h3><p class="mb-0" data-i18n="home.d2_p">After the objection fights are over, the names are final.</p></div>
@@ -124,7 +124,7 @@ const planks = [
     <div class="wrap">
       <p class="quote" style="max-width:40ch;margin-inline:auto"><span data-i18n="home.close_q">"I was never going to represent this neighborhood from a distance. I was born here. I'm staying here."</span><cite data-i18n="home.close_cite">Draft closing line, for Veronica to make her own</cite></p>
       <div class="row mt-3" style="justify-content:center">
-        <a class="btn btn--rose" href={`${base}/join/`} data-i18n="home.cta1">Walk the ward with us</a>
+        <a class="btn btn--rose" href={`${base}/join/`} data-i18n="home.cta1">Tell her what your block needs</a>
         <a class="btn btn--ghost" href={`${base}/platform/`} data-i18n="home.close_cta2">Read the platform</a>
       </div>
     </div>

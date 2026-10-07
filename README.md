@@ -3,6 +3,7 @@
 A concept site that visualizes what a 2027 campaign for Chicago's 22nd Ward (Little Village)
 alderperson could look like for Veronica Quiñones, co-founder and vice president of the Latina
 Sweat Project and a lifelong Little Village resident. Nothing here is a declaration of candidacy.
+Voice: "Cuéntame, Villita" (a listening tour, one kitchen table at a time), "Las llaves no se heredan", "Nacida aquí. Me quedo aquí.", "Puertas abiertas, libros abiertos." All lines are original to this campaign; nothing is borrowed from other campaign sites.
 The site ships with `<meta name="robots" content="noindex, nofollow">`.
 
 Live: https://awaisqazi.github.io/veronica-22nd-ward/
