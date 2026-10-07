@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const roles = [
+  { key: 'r1', title: 'Petition circulator', es: 'Circular peticiones', desc: 'Oct 5 to Oct 24. Carry an official sheet, collect signatures from registered 22nd Ward voters, get it notarized. The single most important job right now.' },
+  { key: 'r2', title: 'Host a house meeting', es: 'Anfitrión de reunión en casa', desc: 'Ten neighbors, your kitchen table, forty-five minutes with Veronica. We bring the pan dulce.' },
+  { key: 'r3', title: 'Walk the ward', es: 'Camina el distrito', desc: 'Saturday mornings, start on 26th Street. Knock doors with a partner, end with a group stretch.' },
+  { key: 'r4', title: 'Hablo español', es: 'Hablo español', desc: 'Spanish-speaking callers and canvassers for the half of the ward that votes in Spanish.' },
+  { key: 'r5', title: 'Notary or lawyer', es: 'Notario o abogado', desc: 'Notarize circulator statements; help review sheets before Oct 26 and defend them in objection hearings.' },
+  { key: 'r6', title: 'Data and design', es: 'Datos y diseño', desc: 'Voter-file lookups, signature validation, graphics for the group chat, video for Instagram.' },
+];
+---
+<Layout title="Get Involved — Veronica Quiñones for 22nd Ward (Exploratory)" description="Petition circulators, house-meeting hosts, Saturday ward walks. Find your post.">
+  <section class="hero rose-bg noise">
+    <div class="wrap">
+      <span class="eyebrow" style="color:#fff" data-i18n="join.eyebrow">Find your post</span>
+      <h1 data-i18n="join.h1">Every body has a post.</h1>
+      <p class="lede" style="color:rgba(255,255,255,.85)" data-i18n="join.lede">A campaign is not a website. It is Saturday mornings on 26th Street, a notarized petition sheet, and a February morning at the polls. Here is where you fit in.</p>
+      <div class="row mt-2">
+        <span class="chip"><strong data-days-until="2026-10-26">21</strong> <span data-i18n="join.chip1">days to file petitions</span></span>
+        <span class="chip"><strong data-days-until="2027-02-23">141</strong> <span data-i18n="join.chip2">days to election day</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="join.now_eyebrow">Right now</span>
+      <h2 data-i18n="join.now_h">The petition sprint: 473 required, 1,500 is the goal.</h2>
+      <div class="grid grid--3 mt-2">
+        <div class="card animate-in">
+          <span class="tag">Oct 5 – 24</span>
+          <h3 data-i18n="join.p1_h">Circulate</h3>
+          <p data-i18n="join.p1_p">Official forms only. Registered voters who live in the 22nd Ward. Print clearly, one signature per line, and you sign the circulator statement in front of a notary.</p>
+        </div>
+        <div class="card animate-in d1">
+          <span class="tag">Oct 19 – 26</span>
+          <h3 data-i18n="join.p2_h">File</h3>
+          <p data-i18n="join.p2_p">Filing opens 9 a.m. Monday Oct 19 in the Pedway outside the Board of Elections. Everyone in line at opening enters the lottery for the top ballot line. Deadline: 5 p.m. Monday Oct 26.</p>
+        </div>
+        <div class="card animate-in d2">
+          <span class="tag">Oct 26 – Dec 17</span>
+          <h3 data-i18n="join.p3_h">Defend</h3>
+          <p data-i18n="join.p3_p">Expect objections from the ward organization. Over-file, have every sheet reviewed by a lawyer before filing, and keep circulators reachable for hearings. Certification is Dec 17.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sand">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="join.roles_eyebrow">Where do you fit in?</span>
+      <h2 data-i18n="join.roles_h">Pick a role.</h2>
+      <div class="grid grid--3 mt-2">
+        {roles.map((r, i) => (
+          <div class={`card animate-in d${i % 4}`}>
+            <span class="es" data-i18n={`join.${r.key}_es`}>{r.es}</span>
+            <h3 data-i18n={`join.${r.key}_h`}>{r.title}</h3>
+            <p data-i18n={`join.${r.key}_p`}>{r.desc}</p>
+            <a href="#signup" class="btn btn--ghost-ink btn--sm" data-role={r.key} data-i18n="join.count_me">Count me in</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="signup">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow" data-i18n="join.form_eyebrow">Sign up</span>
+        <h2 data-i18n="join.form_h">Tell us your block and what you're good at.</h2>
+        <p class="lede" data-i18n="join.form_lede">One hour or one hundred, there's a spot for you. This prototype form does not submit anywhere yet. In production it posts to a Google Form through a hidden iframe, the same pattern used on byronfor25.com.</p>
+        <ol class="steps">
+          <li data-i18n="join.step1">A real person texts you within 48 hours.</li>
+          <li data-i18n="join.step2">You pick a standing date: Saturday walk or Wednesday open table.</li>
+          <li data-i18n="join.step3">You bring one neighbor the first time. Then another.</li>
+        </ol>
+      </div>
+      <form class="card form" onsubmit="event.preventDefault(); this.querySelector('.done').hidden=false;">
+        <label><span data-i18n="join.f_name">Name</span><input type="text" name="name" required /></label>
+        <label><span data-i18n="join.f_phone">Phone</span><input type="tel" name="phone" required /></label>
+        <label><span data-i18n="join.f_block">Your block or cross streets</span><input type="text" name="block" placeholder="26th & Kedzie" /></label>
+        <fieldset>
+          <legend data-i18n="join.f_roles">I can help with</legend>
+          {roles.map((r) => (
+            <label class="chk"><input type="checkbox" name="roles" value={r.key} data-role-box={r.key} /> <span data-i18n={`join.${r.key}_h`}>{r.title}</span></label>
+          ))}
+        </fieldset>
+        <label class="chk"><input type="checkbox" name="petition" /> <span data-i18n="join.f_petition">Bring the petition to me so I can sign it</span></label>
+        <button class="btn btn--rose" type="submit" data-i18n="join.f_submit">Count me in</button>
+        <p class="done foot" hidden data-i18n="join.f_done">Prototype only: nothing was sent. In the live site this is where the "what happens next" message appears.</p>
+        <p class="foot" data-i18n="join.f_sms">By signing up you agree to receive texts from the campaign. Reply STOP to opt out.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section--tight dark center">
+    <div class="wrap">
+      <h2 data-i18n="join.fund_h">Can't walk with us today? Chip in.</h2>
+      <p class="lede" style="margin-inline:auto" data-i18n="join.fund_p">A $27 average donation from neighbors is how a challenger stays unbought. Donation links go live once a committee is registered with the Illinois State Board of Elections.</p>
+      <a class="btn btn--gold mt-1" href="#" aria-disabled="true" data-i18n="join.fund_cta">Chip in $27 (coming soon)</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero { padding: clamp(56px, 8vw, 100px) 0; position: relative; }
+  .hero .eyebrow { color: #fff; }
+  .chip { display: inline-flex; gap: 8px; align-items: baseline; background: rgba(0,0,0,.25); padding: 8px 14px; border-radius: 999px; font-size: .9rem; }
+  .chip strong { font-family: var(--font-display); font-size: 1.3rem; }
+  .steps { padding-left: 1.2em; display: grid; gap: 8px; font-weight: 500; }
+  .form { display: grid; gap: 14px; }
+  .form label { display: grid; gap: 6px; font-weight: 600; font-size: .9rem; }
+  .form input[type="text"], .form input[type="tel"] { padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: var(--cream); }
+  .form fieldset { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; }
+  .form legend { font-weight: 700; font-size: .85rem; padding: 0 6px; }
+  .form .chk { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+  .form .chk input { width: 18px; height: 18px; }
+</style>
+
+<script>
+  document.querySelectorAll('[data-role]').forEach((a) => {
+    a.addEventListener('click', () => {
+      const box = document.querySelector(`[data-role-box="${a.dataset.role}"]`);
+      if (box) box.checked = true;
+    });
+  });
+</script>

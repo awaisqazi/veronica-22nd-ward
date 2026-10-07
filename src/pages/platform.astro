@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const planks = [
+  { id: 'p1', n: '01', es: 'Reabramos la 26: que vuelvan los clientes y que se queden los negocios.', title: 'Bring 26th Street back',
+    why: '26th Street does roughly $900 million a year in sales. During the 2025 federal immigration operation, businesses reported sales down 40 to 70 percent, and the Chamber heard from more than fifteen owners behind on rent in a single week. The city\'s response was a holiday trolley and social media spotlights.',
+    items: [
+      'A 26th Street Recovery Compact in the first 100 days: SSA #25 commissioners, the Chamber, property owners, and street vendors at one table, with part of the SSA budget redirected to rent-bridge micro-grants, corridor security, and cleaning.',
+      'A ward-office application desk, in Spanish, so every eligible storefront applies to Neighborhood Opportunity Fund and Community Development Grant rounds.',
+      'Vacant to Vibrant: menu and SSA money for façades and lighting, and six-to-twelve-month pop-up-to-lease deals pairing empty storefronts with vendors, makers, and nonprofits.',
+      'Co-sponsor a street-vendor licensing ordinance that legalizes safe on-cart preparation of elotes and fruta under CDPH standards, with shared commissary access.',
+      'A year-round "Mercado de la 26" destination campaign with the Chamber and Choose Chicago, anchored on quinceañera season.',
+    ],
+    contrast: 'Veronica has run a small operation through a crisis. As studio manager, she kept the doors open day to day, and when the organization lost its studio to a building sale and kept its programming alive through pop-ups. She knows what rent, payroll, and a landlord\'s decision feel like.' },
+  { id: 'p2', n: '02', es: 'La salud de La Villita no es un lujo: es infraestructura.', title: 'Health is infrastructure',
+    why: 'Most adults in South Lawndale are obese, and about one in two children. Nearly half of households in the surveyed Latino West Side areas are food-insecure. Every Save-A-Lot in Chicago has closed. Diesel traffic from the Hilco warehouse site runs past homes and schools. No candidate owns this issue, and it is the work Veronica has done every week since 2022.',
+    items: [
+      'A Ward Health Report Card every year with CDPH: diabetes, obesity, asthma, food access, and mental-health indicators by neighborhood, with public targets and an annual bilingual town hall.',
+      'Parques Activos: free weekly bilingual fitness in every ward park through the Park District, taught by paid local certified instructors. Walking clubs, strength, family fitness, senior chair classes.',
+      'Finish the Piotrowski Park natatorium with guaranteed free family swim and learn-to-swim hours for ward residents.',
+      'Bring a Spanish-language, CDC-recognized diabetes prevention program to parks, schools, and parishes with local federally qualified health centers.',
+      'Food access: recruit fruterías and bodegas into the city\'s $10,000 Neighborhood Market grants, and start a Piotrowski farmers market that takes LINK with a match.',
+      'Clean air as health policy: co-sponsor the Hazel Johnson Cumulative Impacts Ordinance, enforce the Target-site truck route on Pulaski, and put community air monitors near schools.',
+      'Push to extend the city\'s CARE alternate-response mental-health teams to the 10th and 8th districts, and bring a CDPH no-cost mental-health access point to the Southwest Side.',
+    ],
+    contrast: 'The ward\'s health record is COVID-era convening and reacting to Hilco after the fact. There is no standing plan for chronic disease, food, or fitness. "I\'ve spent years getting our neighbors moving, stretching, and healing. I\'ll bring that to every park in the ward."' },
+  { id: 'p3', n: '03', es: 'Defender a nuestras familias hoy, y prepararlas para mañana.', title: 'Protected and prepared families',
+    why: 'The 2025 operation brought 3,841 arrests citywide, with peak days in Little Village. Consulate registrations of U.S.-born children more than doubled as families planned for the next wave. Defense is the floor; everyone in this race stands on it. The next fight is preparation and recovery.',
+    items: [
+      'Support a ward legal fund and monthly in-ward legal clinics through the city\'s Legal Protection Fund and the Office of New Americans.',
+      'Family Preparedness Plans: free clinics on short-term guardianship and power of attorney so no child is left without a caregiver after a detention, reaching parents through the school, parish, and block networks Veronica has worked with for years.',
+      'Trauma care for kids: press CPS for added social workers and counselors at Farragut, the Little Village Lawndale campus, and the feeder elementaries. Trauma-informed summer programming in the parks.',
+      'Hold CPD to the Welcoming City ordinance: a quarterly public briefing with the 10th and 8th District commanders and district councils on any contact with federal agents.',
+      'Business continuity for immigrant-owned shops: bilingual "what to do if" guides and emergency staffing networks.',
+    ],
+    contrast: 'Not a contrast of courage. A contrast of scope. "Defending families is the floor. We agree on that. I\'ll also make sure families are prepared, kids are cared for, and the businesses that employ them survive."' },
+  { id: 'p4', n: '04', es: 'Que nadie tenga que irse de La Villita, ni por miedo ni por impuestos.', title: 'Stay in La Villita: homes and property taxes',
+    why: 'The 2024 reassessment drove a record 16.7 percent jump in the median Chicago homeowner\'s bill, and about 30 percent on average across fifteen South and West Side neighborhoods. Investors send frightened families up to thirty solicitations a day, including fake "check" mailers. Half of renters are cost-burdened.',
+    items: [
+      'A property-tax help desk at the ward office with monthly bilingual clinics alongside the Assessor and the Board of Review: exemptions, senior freeze, appeals, payment plans. Mobile clinics on the Cicero corridor.',
+      '"No vendas con miedo": a campaign against predatory home buyers, referrals of deceptive mailers to the Attorney General, free housing counseling before any sale, and a disclosure ordinance for unsolicited purchase offers.',
+      'Preserve two-flats and greystones: home-repair and ADU programs, a Little Village housing preservation ordinance modeled on Woodlawn\'s, and support for the neighborhood limited-equity co-op.',
+      'A public, community-driven zoning process: every request published online, a community meeting before any aldermanic support for a major development, and a resident zoning advisory council with renters, owners, and business seats.',
+      'No property-tax increase on homeowners. Protect small businesses. Targeted revenue from the largest entities only if it is legally durable.',
+    ],
+    contrast: 'The ward committee took roughly $49,500 from the Assessor\'s campaign and from the Assessor personally in 2026, after the reassessment that drove the tax spike. Whose side was the ward office on when the bills came?' },
+  { id: 'p5', n: '05', es: 'Seguridad que se siente en cada cuadra.', title: 'Safety you can feel',
+    why: '2025 had the fewest homicides citywide since 1965, and Little Village was a focus area with real drops. Shootings continue on 26th Street and the side streets, and federal money for community violence intervention is being cut. Safer isn\'t safe yet.',
+    items: [
+      'Fight for continued community violence intervention funding in the city budget, and credit the outreach workers and residents who earned the decline.',
+      'A monthly ward safety table with both police districts, CVI outreach workers, schools, and block clubs, with a one-page public data brief after each one.',
+      'Menu money for street and alley lighting on blocks with repeated incidents, and expanded Safe Passage around Farragut and the Little Village Lawndale campus.',
+      'A ward target for One Summer Chicago placements and year-round paid youth work as violence prevention.',
+      'Coordinated patrols, lighting, and safety alerts with the Street Vendors Association on the routes vendors take home.',
+    ],
+    contrast: 'The organization will claim the decline. Veronica credits the people who did the work and focuses on what is next.' },
+  { id: 'p6', n: '06', es: 'Nuestros jóvenes merecen un lugar a dónde ir y alguien que los escuche.', title: 'Kids and teens first',
+    why: 'Farragut enrolls about 400 students. Little Village elementary schools lost almost a fifth of their students during the pandemic. Youth mental health is strained after the raids. Veronica chairs the community programming board that runs free youth and family events across the Southwest Side.',
+    items: [
+      'Every Kid Plays: free youth sports, fitness, and girls\' wellness leagues in ward parks, with menu money to repair fields and lighting.',
+      'Defend neighborhood high schools: oppose cuts to the Little Village Lawndale campus and Farragut, push community-school status and mental-health staffing in the CPS budget.',
+      'A paid Ward Youth Council with its own participatory-budgeting allocation.',
+      'After 3 p.m. and summer: parks, libraries, and nonprofits paired for free programming, with no programs run by any organization tied to the alderperson\'s family or staff.',
+    ],
+    contrast: 'Youth is shared ground with other challengers and a bridge for a runoff. The contrast with the organization is on delivery.' },
+  { id: 'p7', n: '07', es: 'Tu voz, tu voto, tu presupuesto.', title: 'An open ward office',
+    why: 'The seat passed from García in 1986 to Muñoz to Rodriguez, and now to the incumbent\'s chief of staff. In November 2025 the U.S. House formally rebuked the same succession pattern at the congressional level. This is not about any person. It is about how a neighborhood chooses.',
+    items: [
+      'Bring back participatory budgeting: residents vote every year on how to spend a share of the $1.5 million aldermanic menu. The 22nd was one of Chicago\'s first PB wards in 2013.',
+      'Put it all online: menu spending by project and block, every zoning decision with the reason, every ward staff opening posted publicly.',
+      'No dual role, no handoffs: a pledge not to serve as Democratic committeeperson while alderperson, and never to hand-pick a successor or time a departure to favor one.',
+      'A ward office that comes to you: weekly Spanish-first ward nights and mobile office hours on the Cicero corridor, two miles from the office on 26th.',
+      'An independent vote. "My vote belongs to La Villita, not to a mayor." A written explanation for every major budget vote.',
+    ],
+    contrast: '"This seat has been handed down for forty years. I\'m asking for it the other way, from you."' },
+];
+---
+<Layout title="Platform — Veronica Quiñones for 22nd Ward (Exploratory)" description="Seven planks for Little Village: 26th Street recovery, health as infrastructure, prepared families, homes and property taxes, safety, youth, and an open ward office.">
+  <section class="hero dark noise">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="plat.eyebrow">The platform</span>
+      <h1 data-i18n="plat.h1">Built from listening.</h1>
+      <p class="lede" data-i18n="plat.lede">La Villita stood up to the raids. Now it has to be rebuilt by people who live here and have already built something here. Every plank below started as something a neighbor said at a class, a run, a shelter, or a kitchen table, and each one names the mechanism a 22nd Ward alderperson actually controls: the $1.5 million menu, the SSA, zoning, ordinances, CDPH, the Park District, the police district councils.</p>
+      <nav class="jump mt-2" aria-label="Planks">
+        {planks.map((p) => <a href={`#${p.id}`}>{p.n} <span data-i18n={`plat.${p.id}_h`}>{p.title}</span></a>)}
+      </nav>
+    </div>
+  </section>
+
+  {planks.map((p, i) => (
+    <section id={p.id} class={`section plank ${i % 2 ? 'sand' : ''}`}>
+      <div class="wrap">
+        <div class="plank__head">
+          <span class="plank__n">{p.n}</span>
+          <div>
+            <h2 data-i18n={`plat.${p.id}_h`}>{p.title}</h2>
+            <p class="plank__es">{p.es}</p>
+          </div>
+        </div>
+        <div class="split mt-2" style="align-items:start">
+          <div>
+            <span class="eyebrow" data-i18n="plat.why">Why</span>
+            <p data-i18n={`plat.${p.id}_why`}>{p.why}</p>
+            <div class="callout mt-2">
+              <strong data-i18n="plat.contrast">The contrast</strong>
+              <p class="mb-0" data-i18n={`plat.${p.id}_c`}>{p.contrast}</p>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow" data-i18n="plat.deliver">Deliverables</span>
+            <ol class="deliver">
+              {p.items.map((it, j) => <li data-i18n={`plat.${p.id}_i${j + 1}`}>{it}</li>)}
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="section dark">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="plat.100_eyebrow">First 100 days</span>
+      <h2 data-i18n="plat.100_h">What May 17 to August 25, 2027 looks like.</h2>
+      <ol class="hundred grid grid--2 mt-2">
+        <li data-i18n="plat.h1b">Sign the 26th Street Recovery Compact with SSA #25 and the Chamber; launch the rent-bridge micro-grants.</li>
+        <li data-i18n="plat.h2">Open the property-tax and anti-predatory-buyer help desk, with Cicero corridor clinics.</li>
+        <li data-i18n="plat.h3">Start Parques Activos in at least three ward parks.</li>
+        <li data-i18n="plat.h4">Launch participatory budgeting for the next menu cycle.</li>
+        <li data-i18n="plat.h5">Hold the first ward safety table with both police districts and CVI partners.</li>
+        <li data-i18n="plat.h6">Co-sponsor the Cumulative Impacts and street-vendor licensing ordinances.</li>
+        <li data-i18n="plat.h7">Publish the baseline Ward Health Report Card.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section sand">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="plat.lines_eyebrow">Lines to test</span>
+      <h2 data-i18n="plat.lines_h">Four slogans, two jobs.</h2>
+      <div class="grid grid--4 mt-2">
+        <div class="card"><span class="tag tag--gold" data-i18n="plat.l_brand">Brand</span><h3>Stronger, block by block.</h3><p class="es">Más fuerte, cuadra por cuadra.</p><p class="foot mb-0" data-i18n="plat.l1">Warm, active, true to who she is. Yard signs and ward walks.</p></div>
+        <div class="card"><span class="tag" data-i18n="plat.l_contrast">Contrast</span><h3>La Villita isn't inherited. It's chosen.</h3><p class="es">La Villita no se hereda. Se elige.</p><p class="foot mb-0" data-i18n="plat.l2">Process contrast for mail, debates, and the runoff.</p></div>
+        <div class="card"><span class="tag tag--teal" data-i18n="plat.l_bio">Biography</span><h3>Built in La Villita.</h3><p class="es">Hecha en La Villita.</p><p class="foot mb-0" data-i18n="plat.l3">"Made here" pride. Echoes the Immigrant Made shirt in her headshot.</p></div>
+        <div class="card"><span class="tag tag--teal" data-i18n="plat.l_rec">Recovery</span><h3>Rebuild. Together.</h3><p class="es">A reconstruir, juntos.</p><p class="foot mb-0" data-i18n="plat.l4">For 26th Street business outreach.</p></div>
+      </div>
+      <p class="foot mt-2" data-i18n="plat.lines_foot">Language guidance: say builder, rebuild, recovery, health is infrastructure, open ward office, block by block. Never say machine, corrupt, or puppet. Never comment on any opponent's age, gender, or detention. Never promise what sits in another ward: the Discount Mall, La Villita Park, and the county jail are not in the 22nd.</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero { position: relative; padding: clamp(56px, 8vw, 100px) 0; }
+  .jump { display: flex; flex-wrap: wrap; gap: 8px; }
+  .jump a { text-decoration: none; font-family: var(--font-display); font-weight: 600; font-size: .85rem; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-light); color: rgba(255,255,255,.85); }
+  .jump a:hover { background: var(--rose); border-color: var(--rose); color: #fff; }
+  .plank { scroll-margin-top: calc(var(--nav-h) + 40px); }
+  .plank__head { display: flex; gap: 20px; align-items: flex-start; }
+  .plank__n { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1; color: var(--rose); opacity: .35; }
+  .plank__es { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.05rem, 1.8vw, 1.3rem); color: var(--rose-deep); margin: 0; }
+  .deliver { padding-left: 1.4em; display: grid; gap: 12px; margin: 0; }
+  .deliver li::marker { font-family: var(--font-display); font-weight: 800; color: var(--rose); }
+  .hundred { padding-left: 1.4em; margin: 0; counter-reset: h; }
+  .hundred li { font-size: 1.05rem; font-weight: 500; padding: 14px 16px; border: 1px solid var(--line-light); border-radius: 12px; list-style-position: inside; }
+  .hundred li::marker { color: var(--gold); font-weight: 800; font-family: var(--font-display); }
+  .card .es { color: var(--rose); }
+</style>

@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Layout title="Meet Veronica Quiñones — 22nd Ward (Concept)" description="Veronica Quiñones: born and raised in Little Village, UIC sociology graduate, co-founder and vice president of the Latina Sweat Project.">
+  <section class="hero dark noise">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow" data-i18n="meet.eyebrow">Meet Veronica</span>
+        <h1 data-i18n="meet.h1">Born in La Villita. Built for La Villita.</h1>
+        <p class="lede" data-i18n="meet.lede">The daughter of immigrants from Durango, born and raised on these blocks, Veronica Quiñones co-founded a community wellness organization that started in Little Village parks and now reaches thousands of neighbors a month. She has never lived anywhere else, and she has never wanted to.</p>
+        <div class="row mt-2">
+          <span class="tag tag--gold">Little Village</span>
+          <span class="tag tag--gold" data-i18n="meet.tag_uic">Sociology, UIC</span>
+          <span class="tag tag--gold" data-i18n="meet.tag_lsp">Co-founder, Latina Sweat Project</span>
+          <span class="tag tag--gold" data-i18n="meet.tag_ryt">Certified yoga instructor</span>
+        </div>
+      </div>
+      <div class="photo photo--square">
+        <img src={`${base}/images/lsp/veronica/veronica-portrait.jpg`} alt="Veronica Quiñones" width="1171" height="1364" style="object-position: center 12%" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="split split--rev">
+        <div class="photo">
+          <img src={`${base}/images/lsp/community/mutual-aid-distribution.jpg`} alt="Volunteers handing out supplies at a Latina Sweat Project mutual aid event" loading="lazy" />
+          <span class="cap" data-i18n="meet.cap1">Mutual aid distribution</span>
+        </div>
+        <div>
+          <span class="eyebrow" data-i18n="meet.story_eyebrow">Her story</span>
+          <h2 data-i18n="meet.story_h">A family that stayed, and a daughter who listened.</h2>
+          <p data-i18n="meet.story_p1">In 1993 Antonia and Eduardo Quiñones left Santiago Papasquiaro, Durango, and settled in Little Village. He worked in factories. She worked in maintenance and home care. On those wages they put three daughters through college. Veronica, the youngest, was born in Chicago and grew up in La Villita, the only one of the three with a passport from the start, and she has spent her adult life making sure that accident of birth counts for something for the people around her.</p>
+          <p data-i18n="meet.story_p2">She studied sociology at the University of Illinois Chicago with a focus on social equity, then came home. In 2022 she and her sister Margarita began teaching pop-up yoga in Little Village parks and running mutual aid sessions inside migrant shelters. No grant, no building, no permission. Veronica found her own practice in those community classes, got certified, and started teaching because the rooms she had walked into before never looked like her neighborhood.</p>
+          <p data-i18n="meet.story_p3">That became the Latina Sweat Project. As co-founder, vice president, and studio manager, she is the person who opens the doors, answers the texts, and knows every regular by name. As chair of the community programming board, she plans the free events: kids' days, Monday Miles runs, back-to-school drives, the Banda Sculpt class at Sweat Fest. When the organization lost its first studio to a building sale this fall, she is the one keeping the pop-ups running around the neighborhood.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sand">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow" data-i18n="meet.listen_eyebrow">How she works</span>
+        <h2 data-i18n="meet.listen_h">Listening is not a slogan. It is the method.</h2>
+        <p data-i18n="meet.listen_p1">Every program the Latina Sweat Project runs started as something a neighbor asked for. Spanish-language classes because abuelas asked. A six a.m. sculpt class because the night shift asked. Mutual aid in the shelters because the families there asked. Veronica's job for four years has been to hear the ask, find the room, find the money, and show up the next week with it done.</p>
+        <p data-i18n="meet.listen_p2">That is the ward office she wants to run: one that hears the block before it decides for the block. Weekly ward nights in Spanish first. A real participatory budget. Every zoning decision posted with the reason. Office hours on the Cicero corridor, not just on 26th.</p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card animate-in"><div class="stat"><div class="num"><span data-count="2022">2022</span></div><div class="label" data-i18n="meet.s1">first pop-up classes in Little Village parks and migrant shelters</div></div></div>
+        <div class="card animate-in d1"><div class="stat"><div class="num"><span data-count="5000" data-suffix="+">5,000+</span></div><div class="label" data-i18n="meet.s2">free or discounted classes funded by community campaigns</div></div></div>
+        <div class="card animate-in d2"><div class="stat"><div class="num"><span data-count="100" data-prefix="~">~100</span></div><div class="label" data-i18n="meet.s3">neighbors certified as yoga teachers, tuition-free</div></div></div>
+        <div class="card animate-in d3"><div class="stat"><div class="num"><span data-count="1000" data-suffix="+">1,000+</span></div><div class="label" data-i18n="meet.s4">warm meals distributed in 2025</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow" data-i18n="meet.why_eyebrow">Why run</span>
+        <h2 data-i18n="meet.why_h">The neighborhood that raised her deserves a ward office that works like she does.</h2>
+        <p data-i18n="meet.why_p1">Veronica has watched 26th Street empty out during the raids, watched families she grew up with get thirty offers a week to sell their two-flats, and watched a community organization get displaced from its own building. None of it surprised her. All of it is fixable, block by block, if the ward office listens first.</p>
+        <p data-i18n="meet.why_p2">She is not a staffer waiting her turn, and she is not a stranger to the ward. She is a neighbor who already built something here, with her own hands and her sister's, and is ready to do it at the scale a ward office allows.</p>
+        <a class="btn btn--rose mt-1" href={`${base}/platform/`} data-i18n="meet.why_cta">Read the platform</a>
+      </div>
+      <div class="photo photo--wide">
+        <img src={`${base}/images/lsp/community/studio-packed-class.jpg`} alt="A packed community class at the Latina Sweat Project studio" loading="lazy" />
+        <span class="cap" data-i18n="meet.cap2">A Saturday at the studio</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight dark">
+    <div class="wrap">
+      <div class="grid grid--3">
+        <div>
+          <h3 data-i18n="meet.f1_h">Roots</h3>
+          <p class="muted" data-i18n="meet.f1_p">Born in Chicago to parents from Durango. Raised in Little Village. Still lives in Little Village. Youngest of three sisters.</p>
+        </div>
+        <div>
+          <h3 data-i18n="meet.f2_h">Training</h3>
+          <p class="muted" data-i18n="meet.f2_p">Bachelor's in Sociology, University of Illinois Chicago, focused on social equity and community well-being. Certified yoga instructor.</p>
+        </div>
+        <div>
+          <h3 data-i18n="meet.f3_h">Leadership</h3>
+          <p class="muted" data-i18n="meet.f3_p">Co-founder, vice president, and studio manager, Latina Sweat Project. Chair, Community Programming board. Featured with members in WGN9's Around Town series.</p>
+        </div>
+      </div>
+      <p class="foot mt-2" data-i18n="meet.foot">Sources: latinasweatproject.com about and press pages; Chicago Reader, Aug 21, 2026; Chicago Tribune, Aug 6, 2023. Confirm her exact title with the LSP board before public use. LSP is a 501(c)(3) and does not endorse candidates.</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero { position: relative; padding: clamp(56px, 8vw, 110px) 0; overflow: hidden; }
+  .hero .photo { max-width: 440px; margin-inline: auto; }
+</style>

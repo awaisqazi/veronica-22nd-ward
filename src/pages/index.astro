@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const planks = [
+  { n: '01', key: 'p1', es: 'Reabramos la 26', title: 'Bring 26th Street back', desc: 'A recovery compact in the first 100 days: rent-bridge micro-grants through the SSA, a vacant-to-vibrant storefront program, and a vendor licensing fix that finally lets elotes be made on the cart.' },
+  { n: '02', key: 'p2', es: 'La salud es infraestructura', title: 'Health is infrastructure', desc: 'Free weekly fitness in every ward park with local instructors, a yearly Ward Health Report Card, diabetes prevention where people already go, and clean air treated as a health policy.' },
+  { n: '03', key: 'p3', es: 'Familias protegidas y preparadas', title: 'Protected and prepared families', desc: 'Defense is the floor. Add family preparedness clinics, trauma care for kids in ward schools, and quarterly public briefings with both police districts on any contact with federal agents.' },
+  { n: '04', key: 'p4', es: 'Que nadie tenga que irse', title: 'Stay in La Villita', desc: 'A property-tax help desk with mobile clinics on the Cicero corridor, a campaign against predatory home buyers, and a public, community-driven zoning process.' },
+  { n: '05', key: 'p5', es: 'Seguridad que se siente', title: 'Safety you can feel', desc: 'Protect the violence-intervention gains, light the blocks with repeated incidents, expand Safe Passage, and guarantee summer jobs for ward teens.' },
+  { n: '06', key: 'p6', es: 'Jóvenes primero', title: 'Kids and teens first', desc: 'Every kid plays: free leagues in ward parks, a paid youth council with its own budget, and a fight for mental-health staff at Farragut and the Little Village Lawndale campus.' },
+  { n: '07', key: 'p7', es: 'Tu voz, tu voto, tu presupuesto', title: 'A ward office that listens', desc: 'Participatory budgeting on the $1.5M menu, every zoning decision online with the reason, weekly Spanish-first ward nights, and a pledge never to hand-pick a successor.' },
+];
+---
+<Layout>
+  <section class="hero noise">
+    <div class="hero__bg">
+      <img src={`${base}/images/lsp/community/studio-packed-class.jpg`} alt="" width="3500" height="2625" fetchpriority="high" />
+    </div>
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <span class="hero__badge"><span data-i18n="home.badge">Concept · 22nd Ward · Little Village</span></span>
+        <h1><span data-i18n="home.h1a">Listen first.</span> <em data-i18n="home.h1b">Then build.</em></h1>
+        <p class="hero__es" data-i18n="home.hero_es">Primero escuchar. Luego construir.</p>
+        <p class="lede" data-i18n="home.lede">Veronica Quiñones was born in Little Village, grew up here, and still lives here. She co-founded the Latina Sweat Project and runs its community programming. She is exploring a run for 22nd Ward alderperson because the neighborhood that raised her deserves a ward office that listens the way she does.</p>
+        <div class="row mt-2">
+          <a class="btn btn--rose" href={`${base}/join/`} data-i18n="home.cta1">Walk the ward with us</a>
+          <a class="btn btn--ghost" href={`${base}/platform/`} data-i18n="home.cta2">Read the platform</a>
+        </div>
+        <div class="hero__count">
+          <strong data-days-until="2027-02-23">139</strong> <span data-i18n="home.count">days until February 23, 2027</span>
+        </div>
+      </div>
+      <div class="hero__portrait">
+        <img src={`${base}/images/lsp/veronica/veronica-portrait.jpg`} alt="Veronica Quiñones" width="1171" height="1364" />
+        <span class="hero__tape"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker dark" data-ticker aria-hidden="true">
+    <div class="ticker__track">
+      <span>De La Villita, para La Villita.</span><span>Primero escuchar. Luego construir.</span><span>Hoy por mí, mañana por ti.</span><span>Reabramos la 26.</span><span>La Villita no se hereda. Se elige.</span><span>Nacida en La Villita.</span>
+      <span>De La Villita, para La Villita.</span><span>Primero escuchar. Luego construir.</span><span>Hoy por mí, mañana por ti.</span><span>Reabramos la 26.</span><span>La Villita no se hereda. Se elige.</span><span>Nacida en La Villita.</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="home.built_eyebrow">What we already built</span>
+      <h2 data-i18n="home.built_h">We didn't wait for a title. We built it.</h2>
+      <p class="lede" data-i18n="home.built_lede">In 2022 Veronica and her sister started pop-up yoga classes in Little Village parks and mutual aid sessions inside migrant shelters. Nobody asked them to. That became the Latina Sweat Project: daily programming on the Southwest Side, thousands of free classes, nearly a hundred neighbors trained as teachers on full scholarships, meals and coats and school supplies for families when they needed them.</p>
+      <div class="grid grid--4 mt-2">
+        <div class="stat animate-in"><div class="num"><span data-count="5000" data-suffix="+">5,000+</span></div><div class="label" data-i18n="home.b1">free or discounted classes</div></div>
+        <div class="stat animate-in d1"><div class="num"><span data-count="100" data-prefix="~">~100</span></div><div class="label" data-i18n="home.b2">neighbors certified as teachers, tuition-free</div></div>
+        <div class="stat animate-in d2"><div class="num"><span data-count="100" data-suffix="+">100+</span></div><div class="label" data-i18n="home.b3">free community events and collaborations</div></div>
+        <div class="stat animate-in d3"><div class="num"><span data-count="7500" data-suffix="+">7,500+</span></div><div class="label" data-i18n="home.b4">articles of clothing donated in 2025</div></div>
+      </div>
+      <p class="foot mt-2" data-i18n="home.built_foot">Figures are the Latina Sweat Project's public reporting, shown as biography. LSP is a 501(c)(3) and does not endorse candidates. Verify before public use.</p>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="wrap split">
+      <div class="photo">
+        <img src={`${base}/images/lsp/community/community-line-street.jpg`} alt="Neighbors lined up along a Little Village sidewalk for a community event" loading="lazy" />
+      </div>
+      <div>
+        <span class="eyebrow" data-i18n="home.meet_eyebrow">Meet Veronica</span>
+        <h2 data-i18n="home.meet_h">Born on these blocks. Never left.</h2>
+        <p data-i18n="home.meet_p1">Veronica Quiñones is the youngest of three daughters of a factory worker and a home-care worker from Durango who settled in La Villita in 1993. She was born here, went to school here, earned a sociology degree at UIC, and came back to the same blocks to work.</p>
+        <p data-i18n="home.meet_p2">She co-founded the Latina Sweat Project, serves as its vice president, runs its studio day to day, and chairs the board that plans its free community programming. Her habit, the thing neighbors mention first, is that she listens before she decides.</p>
+        <a class="btn btn--gold mt-1" href={`${base}/meet/`} data-i18n="home.meet_cta">Her story</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sand">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="home.plan_eyebrow">The platform</span>
+      <h2 data-i18n="home.plan_h">Rebuild. Together.</h2>
+      <p class="lede" data-i18n="home.plan_lede">La Villita stood up to the raids. Now it has to be rebuilt by the people who live here. Seven planks, each one started by something a neighbor said, each one tied to a mechanism a 22nd Ward alderperson actually controls.</p>
+      <div class="grid grid--3 mt-2">
+        {planks.map((p, i) => (
+          <a class={`card plank animate-in d${i % 4}`} href={`${base}/platform/#${p.key}`}>
+            <span class="plank__n">{p.n}</span>
+            <span class="es" data-i18n={`home.${p.key}_es`}>{p.es}</span>
+            <h3 data-i18n={`home.${p.key}_h`}>{p.title}</h3>
+            <p class="mb-0" data-i18n={`home.${p.key}_p`}>{p.desc}</p>
+          </a>
+        ))}
+        <div class="card plank plank--cta animate-in d3">
+          <h3 data-i18n="home.plank_cta_h">First 100 days</h3>
+          <p data-i18n="home.plank_cta_p">The recovery compact signed, the tax help desk open, free fitness in three parks, participatory budgeting launched.</p>
+          <a class="btn btn--rose btn--sm" href={`${base}/platform/`} data-i18n="home.plank_cta">Full platform</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rose-bg noise choice">
+    <div class="wrap">
+      <span class="eyebrow" style="color:#fff" data-i18n="home.choice_eyebrow">A choice, not a handoff</span>
+      <h2 data-i18n="home.choice_h">This seat has been passed down for forty years. We're asking for it the other way: from you.</h2>
+      <p class="lede" style="color:rgba(255,255,255,.88)" data-i18n="home.choice_p">García to Muñoz to Rodriguez, and now the incumbent's chief of staff, announced the day after he stepped aside. Nobody is questioning anyone's courage or commitment to this community. We are questioning the process. A seat can be handed down. A vote can't.</p>
+      <p class="choice__es">Un puesto se puede heredar. Un voto, no.</p>
+      <a class="btn btn--gold mt-1" href={`${base}/meet/`} data-i18n="home.choice_cta">Why Veronica</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="home.cal_eyebrow">Mark these dates</span>
+      <h2 data-i18n="home.cal_h">Show up. Bring your comadre.</h2>
+      <div class="grid grid--4 mt-2">
+        <div class="card"><span class="tag">Oct 26, 2026</span><h3 data-i18n="home.d1_h">Petitions due</h3><p class="mb-0" data-i18n="home.d1_p">5 p.m. at the Board of Elections. 473 valid signatures required; we file three times that.</p></div>
+        <div class="card"><span class="tag">Dec 17, 2026</span><h3 data-i18n="home.d2_h">Ballot certified</h3><p class="mb-0" data-i18n="home.d2_p">After the objection fights are over, the names are final.</p></div>
+        <div class="card"><span class="tag">Jan 14, 2027</span><h3 data-i18n="home.d3_h">Early voting opens</h3><p class="mb-0" data-i18n="home.d3_p">Mail ballots go out the same day. Vota temprano.</p></div>
+        <div class="card"><span class="tag tag--gold">Feb 23 · Apr 6</span><h3 data-i18n="home.d4_h">Election and runoff</h3><p class="mb-0" data-i18n="home.d4_p">If nobody clears 50% on February 23, the top two meet again on April 6.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark center">
+    <div class="wrap">
+      <p class="quote" style="max-width:40ch;margin-inline:auto"><span data-i18n="home.close_q">"I was never going to represent this neighborhood from a distance. I was born here. I'm staying here."</span><cite data-i18n="home.close_cite">Draft closing line, for Veronica to make her own</cite></p>
+      <div class="row mt-3" style="justify-content:center">
+        <a class="btn btn--rose" href={`${base}/join/`} data-i18n="home.cta1">Walk the ward with us</a>
+        <a class="btn btn--ghost" href={`${base}/platform/`} data-i18n="home.close_cta2">Read the platform</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero { position: relative; overflow: hidden; background: var(--ink); color: #fff; min-height: 88vh; display: flex; align-items: center; }
+  .hero__bg { position: absolute; inset: 0; }
+  .hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; opacity: 0.28; filter: saturate(0.6); }
+  .hero__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(30,30,30,.96) 0%, rgba(30,30,30,.82) 45%, rgba(200,50,95,.35) 100%); }
+  .hero__inner { position: relative; z-index: 1; display: grid; gap: 40px; padding: clamp(56px, 8vw, 110px) 0; align-items: center; }
+  @media (min-width: 900px) { .hero__inner { grid-template-columns: 1.3fr 0.7fr; } }
+  .hero__badge { display: inline-block; font-family: var(--font-display); font-weight: 700; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(255,189,89,.5); padding: 6px 12px; border-radius: 999px; margin-bottom: 20px; }
+  .hero h1 { font-size: clamp(2.8rem, 7.5vw, 5.6rem); margin-bottom: 6px; }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero__es { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.1rem, 2vw, 1.5rem); color: var(--rose-soft); margin-bottom: 18px; }
+  .hero .lede { color: rgba(255,255,255,.82); }
+  .hero__count { margin-top: 28px; font-family: var(--font-display); font-weight: 600; color: rgba(255,255,255,.75); }
+  .hero__count strong { font-size: 1.6rem; color: var(--gold); margin-right: 6px; }
+  .hero__portrait { position: relative; max-width: 360px; margin-inline: auto; rotate: 1.5deg; aspect-ratio: 1; overflow: hidden; border-radius: 18px; box-shadow: 0 30px 60px rgba(0,0,0,.45); border: 6px solid #fff; }
+  .hero__portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 12%; }
+  .hero__tape { position: absolute; top: -12px; left: 50%; translate: -50% 0; width: 90px; height: 24px; background: rgba(255,189,89,.75); rotate: -3deg; }
+  .plank { text-decoration: none; display: block; position: relative; transition: transform .18s ease, box-shadow .18s ease; }
+  .plank:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .plank__n { position: absolute; top: 18px; right: 22px; font-family: var(--font-display); font-weight: 900; font-size: 1.6rem; color: var(--sand-2); }
+  .plank--cta { background: var(--ink); color: #fff; border: 0; }
+  .choice h2 { max-width: 20ch; }
+  .choice__es { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--gold); }
+</style>
